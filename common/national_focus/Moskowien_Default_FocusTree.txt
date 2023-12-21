@@ -1,0 +1,361 @@
+focus_tree = {
+	id = Moskowien_Default_FocusTree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SNP
+		}
+	} 
+	default = no
+	focus = {
+		id = Chaos_Moscovien
+		icon = GFX_Chaos_Moscovien
+		cost = 1
+		x = 8
+		y = 0
+		completion_reward = {
+			add_ideas = SNP_Chaos_in_Moscovien
+			custom_effect_tooltip = SNP_visible_GUI
+			set_country_flag = SNP_GUI_visible_flag
+		}
+	}
+	focus = {
+		id = Crisis_Opportunity
+		icon = GFX_GNG_Equal_Opportunity
+		cost = 1
+		prerequisite = {
+			focus = Chaos_Moscovien
+		}
+		x = 2
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = SNP_GUI_1
+		}
+
+	}
+	focus = {
+		id = Leveraging_Geographic_Advantage
+		icon = GFX_GER_first_things_first
+		cost = 1
+		prerequisite = {
+			focus = Crisis_Opportunity
+		}
+		x = 1
+		y = 2
+		completion_reward = {
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = Contact_Home_Country
+		icon = GFX_GER_new_rules_new_reichstag
+		cost = 1
+		prerequisite = {
+			focus = Leveraging_Geographic_Advantage
+		}
+		x = 1
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = SNP_Contact_Home_Country
+		}
+
+	}
+	focus = {
+		id = Rummage_through_corpse
+		icon = GFX_GER_failure_warrants_punishment
+		cost = 1
+		prerequisite = {
+			focus = Chaos_Moscovien
+		}
+		x = 8
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = SNP_GUI_2
+		}
+
+	}
+	focus = {
+		id = Loot_Utilize
+		icon = GFX_USA_Finance_the_Ports
+		cost = 1
+		prerequisite = {
+			focus = Crisis_Opportunity
+		}
+		prerequisite = {
+			focus = Rummage_through_corpse
+		}
+		x = 3
+		y = 2
+		completion_reward = {
+			set_temp_variable = { money_reserves_temp = 0.2 }
+			econ_money_reserves_change_raw_money = yes
+			random_owned_state = {
+				add_state_modifier = {
+					modifier = {
+						state_GDP_growth_modifier = -0.25
+					}
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = Open_safe
+		icon = GFX_Generic_Money
+		cost = 1
+		prerequisite = {
+			focus = Loot_Utilize
+		}
+		x = 3
+		y = 3
+		completion_reward = {
+			set_temp_variable = { money_reserves_temp = 0.5 }
+			econ_money_reserves_change_raw_money = yes
+			random_owned_state = {
+				add_state_modifier = {
+					modifier = {
+						state_GDP_growth_modifier = -0.5
+					}
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = Keep_money
+		icon = GFX_GER_Let_The_Money_Flow
+		cost = 1
+		prerequisite = {
+			focus = Open_safe
+		}
+		prerequisite = {
+			focus = Contact_Home_Country
+		}
+		completion_reward = {
+			set_temp_variable = { gdp_growth_temp = -0.5}
+			econ_gdp_growth_change = yes
+			set_temp_variable = { income_tax_temp = 0.1 }
+			econ_income_tax_rate_change = yes
+			set_temp_variable = { business_tax_temp = 0.1 }
+			econ_business_tax_rate_change = yes
+		}
+		x = 2
+		y = 4
+
+	}
+	focus = {
+		id = Authenticity_Appeal
+		icon = GFX_GIB_propaganda_for_pay
+		cost = 1
+		prerequisite = {
+			focus = Rummage_through_corpse
+		}
+		x = 8
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = SNP_Authenticity_Appeal
+		}
+
+	}
+	focus = {
+		id = Those_in_High_Places
+		icon = GFX_Generic_Friends_in_the_Council
+		cost = 1
+		prerequisite = {
+			focus = Authenticity_Appeal
+		}
+		x = 8
+		y = 3
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+	}
+	focus = {
+		id = scatter_money_envelopes
+		icon = GFX_USA_money_wall
+		cost = 1
+		prerequisite = {
+			focus = Those_in_High_Places
+		}
+		x = 8
+		y = 4
+		completion_reward = {
+			set_temp_variable = { money_reserves_temp = -0.5 }
+			econ_money_reserves_change_raw_money = yes
+			add_stability = 0.10
+			add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = Collaborating_with_Junker
+		icon = GFX_GER_economic_planning
+		cost = 1
+		prerequisite = {
+			focus = scatter_money_envelopes
+		}
+		prerequisite = {
+			focus = Keep_money
+		}
+		x = 5
+		y = 5
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = tno_max_workhours_10_hour_work_day
+				add_idea = tno_max_workhours_12_hour_work_day
+			}
+			tno_max_workhours_12_hour_work_day_effect = yes
+			TNO_improve_industrial_equipment_low = yes
+		}
+
+	}
+	focus = {
+		id = Struggle
+		icon = GFX_GER_monuments_great_war
+		cost = 1
+		prerequisite = {
+			focus = Chaos_Moscovien
+		}
+		x = 14
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = SNP_GUI_3
+		}
+
+	}
+	focus = {
+		id = Ethnic_Struggle
+		icon = GFX_USA_Use_The_Ghetto_Riots
+		cost = 1
+		prerequisite = {
+			focus = Struggle
+		}
+		prerequisite = {
+			focus = Rummage_through_corpse
+		}
+		x = 13
+		y = 2
+		completion_reward = {
+			add_war_support = 0.1
+		}
+
+	}
+	focus = {
+		id = Anti_Slavic_Propaganda
+		icon = GFX_GER_aryan_generic
+		cost = 1
+		prerequisite = {
+			focus = Ethnic_Struggle
+		}
+		x = 13
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = SNP_Anti_Slavic_Propaganda
+			GER = {
+				send_equipment = {
+					equipment = infantry_equipment
+					amount = 800
+					target = SNP
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = Wehrmacht_Capture
+		icon = GFX_GER_review_the_wehrmacht
+		cost = 1
+		prerequisite = {
+			focus = Struggle
+		}
+		x = 15
+		y = 2
+		
+		completion_reward = {
+			add_ideas = SNP_Prussian_Generals_Refuge
+		}
+
+	}
+	focus = {
+		id = Militia_Recruitment
+		icon = GFX_HGR_Keep_The_Military_Sated
+		cost = 1
+		prerequisite = {
+			focus = Wehrmacht_Capture
+		}
+		x = 15
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = SNP_unlock_militia
+			add_ideas = SNP_Militia_Recruitment
+		}
+
+	}
+	focus = {
+		id = South
+		icon = GFX_GER_Honor_the_War
+		cost = 1
+		prerequisite = {
+			focus = Militia_Recruitment
+		}
+		prerequisite = {
+			focus = Anti_Slavic_Propaganda
+		}
+		x = 14
+		y = 4
+		completion_reward = {
+			add_timed_idea = { idea = SNP_south days = 50 }
+			custom_effect_tooltip = SNP_GUI_4
+		}
+
+	}
+	focus = {
+		id = Warriors_Trust
+		icon = GFX_BRY_Red_Terror_Marches
+		cost = 1
+		prerequisite = {
+			focus = South
+		}
+		prerequisite = {
+			focus = scatter_money_envelopes
+		}
+		x = 11
+		y = 5
+		completion_reward = {
+			custom_effect_tooltip = SNP_Warriors_Trust
+			hidden_effect = {
+				add_ideas = SNP_Warriors_Trust_idea
+			}
+		}
+
+	}
+	focus = {
+		id = Gott_mit_uns
+		icon = GFX_GER_Expressing_Inconfidence
+		cost = 1
+		prerequisite = {
+			focus = Warriors_Trust
+		}
+		prerequisite = {
+			focus = Collaborating_with_Junker
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = Gott_mit_uns_ctt
+				NOT = {
+					has_idea = MCW_dissolution
+				}
+			}
+		}
+		x = 8
+		y = 6
+		completion_reward = {
+			custom_effect_tooltip = SNP_Gott_mit_uns
+			load_focus_tree = Moskowien_SNP_1
+		}
+
+	}
+}

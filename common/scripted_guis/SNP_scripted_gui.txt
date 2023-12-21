@@ -1,0 +1,42 @@
+scripted_gui = {
+  	TNO_SNP_GUIs_open = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "TNO_SNP_GUIs_open"
+
+		visible = {
+			always = yes
+		}
+
+		triggers = {
+		}
+
+		effects = {
+      		SNP_menu_open_click = {
+				if = {
+					limit = { NOT = { has_country_flag = SNP_GUI_open_flag } }
+					set_country_flag = SNP_GUI_open_flag
+				}
+				else_if = {
+					limit = { has_country_flag = SNP_GUI_open_flag }
+					clr_country_flag = SNP_GUI_open_flag
+				}
+			}
+	  	}
+  	}
+  	TNO_SNP_main_GUI = {
+		context_type = player_context
+		parent_window_token = top_bar
+		window_name = "TNO_SNP_main_GUI"
+
+		visible = {
+			has_country_flag = SNP_GUI_open_flag
+		}
+
+		triggers = {
+		}
+
+		effects = {
+	  	}
+  	}
+}

@@ -1,0 +1,21 @@
+#defined_text = {
+#	name = GetJGRstudent
+#
+#	text = {
+#		trigger = {
+#			check_variable = { JGR_bar_student_var < 50 }
+#		}
+#		localization_key = "JGR_low"
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = { JGR_bar_student_var > 50 }
+#		}
+#		localization_key = "JGR_high"
+#	}
+#	text = {
+#		trigger = {
+#		}
+#		localization_key = "JGR_middle"
+#	}
+#}

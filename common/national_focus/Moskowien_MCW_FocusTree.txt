@@ -1,0 +1,250 @@
+focus_tree = {
+	id = Moskowien_MCW_FocusTree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MCW
+		}
+	} 
+	default = no
+	focus = {  
+		id = MCW_default_tree_1-1
+		icon = GFX_GNG_Dont_Worry
+		cost = 5
+		x = 8
+		y = 0
+		completion_reward = {
+			custom_effect_tooltip = MCW_default_tree_1-1_tt
+		}
+	}
+	focus = {
+		id = MCW_default_tree_1-2
+		icon = GFX_MCW_a_tour_around_the_prison
+		cost = 5
+		x = 8
+		y = 1
+		prerequisite = {
+			focus = MCW_default_tree_1-1
+		}
+		completion_reward = {
+			custom_effect_tooltip = MCW_default_tree_1-2_tt
+		}
+	}
+	focus = {
+		id = MCW_default_tree_1-3
+		icon = GFX_MCW_Gezet_Military_Budget
+		cost = 5
+		x = 6
+		y = 2
+		prerequisite = {
+			focus = MCW_default_tree_1-2
+		}
+		completion_reward = {
+			custom_effect_tooltip = MCW_default_tree_1-3_tt
+		}
+	}
+	focus = {
+		id = MCW_default_tree_1-4
+		icon = GFX_GNG_Or_Against_Us
+		cost = 5
+		x = 10
+		y = 2
+		prerequisite = {
+			focus = MCW_default_tree_1-2
+		}
+		completion_reward = {
+			custom_effect_tooltip = MCW_default_tree_1-4_tt
+		}
+	}
+	focus = {
+		id = MCW_default_tree_1-5
+		icon = GFX_MCW_rusted_but_not_broken
+		cost = 8
+		x = 8
+		y = 3
+		prerequisite = {
+			focus = MCW_default_tree_1-4
+		}
+		prerequisite = {
+			focus = MCW_default_tree_1-3
+		}
+		completion_reward = {
+			custom_effect_tooltip = MCW_default_tree_1-5_tt
+		}
+	}
+	focus = {
+		id = MCW_default_tree_2-1
+		icon = GFX_UKR_walk_the_eggshells
+		cost = 5
+		x = 5
+		y = 4
+		prerequisite = {
+			focus = MCW_default_tree_1-5
+		}
+		completion_reward = {
+			custom_effect_tooltip = MCW_default_tree_2-1_tt
+		}
+	}
+	focus = {
+		id = MCW_default_tree_2-2
+		icon = GFX_GNG_End_Corruption
+		cost = 5
+		x = 4
+		y = 5
+		prerequisite = {
+			focus = MCW_default_tree_2-1
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MCW_default_tree_2-3
+		icon = GFX_GNG_Trim_the_Fat
+		cost = 5
+		x = 6
+		y = 5
+		prerequisite = {
+			focus = MCW_default_tree_2-1
+		}
+		prerequisite = {
+			focus = MCW_default_tree_3-1
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MCW_default_tree_2-4
+		icon = GFX_MCW_eagles
+		cost = 5
+		x = 5
+		y = 6
+		prerequisite = {
+			focus = MCW_default_tree_2-2 
+		}
+		prerequisite = {
+			focus = MCW_default_tree_2-3
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MCW_default_tree_3-1
+		icon = GFX_MCW_default_tree_3-1
+		cost = 5
+		x = 8
+		y = 4
+		prerequisite = {
+			focus = MCW_default_tree_1-5
+		}
+		completion_reward = {
+			custom_effect_tooltip = MCW_default_tree_3-1_tt
+		}
+	}
+	focus = {
+		id = MCW_default_tree_3-2
+		icon = GFX_MCW_he_will_survive_and_so_will_this_place
+		cost = 5
+		x = 8
+		y = 5
+		prerequisite = {
+			focus = MCW_default_tree_2-1
+		}
+		prerequisite = {
+			focus = MCW_default_tree_3-1
+		}
+		prerequisite = {
+			focus = MCW_default_tree_4-1
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MCW_default_tree_3-3
+		icon = GFX_MCW_tapeworms
+		cost = 5
+		x = 8
+		y = 6
+		prerequisite = {
+			focus = MCW_default_tree_2-3
+		}
+		prerequisite = {
+			focus = MCW_default_tree_3-2
+		}
+		prerequisite = {
+			focus = MCW_default_tree_4-2
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MCW_default_tree_4-1
+		icon = GFX_MCW_wrangling_the_ostvolk
+		cost = 5
+		x = 11
+		y = 4
+		prerequisite = {
+			focus = MCW_default_tree_1-5
+		} 
+		completion_reward = {
+			custom_effect_tooltip = MCW_default_tree_4-1_tt
+		}
+	}
+	focus = {
+		id = MCW_default_tree_4-2
+		icon = GFX_handling_the_betrayers
+		cost = 5
+		x = 10
+		y = 5
+		prerequisite = {
+			focus = MCW_default_tree_4-1
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MCW_default_tree_4-3
+		icon = GFX_GNG_No_Room_to_Breathe
+		cost = 5
+		x = 12
+		y = 5
+		prerequisite = {
+			focus = MCW_default_tree_4-1
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MCW_default_tree_4-4
+		icon = GFX_GNG_An_Invisible_Cage
+		cost = 5
+		x = 11
+		y = 6
+		prerequisite = {
+			focus = MCW_default_tree_4-2
+		}
+		prerequisite = {
+			focus = MCW_default_tree_4-3
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MCW_default_tree_5-1
+		icon = GFX_MCW_to_hold_it_together
+		cost = 5
+		x = 8
+		y = 7
+		prerequisite = {
+			focus = MCW_default_tree_2-4
+		}
+		prerequisite = {
+			focus = MCW_default_tree_3-3
+		}
+		prerequisite = {
+			focus = MCW_default_tree_4-4
+		}
+		completion_reward = {
+		}
+	}
+}

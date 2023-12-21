@@ -1,0 +1,154 @@
+add_namespace = SNP
+
+country_event = {
+	id = SNP.1 #다른 마음을 품은자는?
+	title = SNP.1.title
+	desc = SNP.1.desc
+	picture = GFX
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = SNP.1.a
+		custom_effect_tooltip = SNP_1_event_tt
+		add_manpower = -1
+	}
+}
+country_event = {
+	id = SNP.2 #불안해하는 자는?
+	title = SNP.2.title
+	desc = SNP.2.desc
+	picture = GFX
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = SNP.2.a
+		hidden_effect = {
+
+		}
+	}
+}
+country_event = {
+	id = SNP.3 #우리와 협력할자는?
+	title = SNP.3.title
+	desc = SNP.3.desc
+	picture = GFX
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = SNP.3.a
+		hidden_effect = {
+
+		}
+	}
+}
+country_event = {
+	id = SNP.4 #우린 누구와 싸우는가?
+	title = SNP.4.title
+	desc = SNP.4.desc
+	picture = GFX
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = SNP.4.a
+		hidden_effect = {
+
+		}
+	}
+}
+country_event = {
+	id = SNP.5 #우리는 무얼 위해 싸우는가?
+	title = SNP.5.title
+	desc = SNP.5.desc
+	picture = GFX
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = SNP.5.a
+		hidden_effect = {
+
+		}
+	}
+}
+country_event = {
+	id = SNP.6 #누가 우리와 싸우는가?
+	title = SNP.6.title
+	desc = SNP.6.desc
+	picture = GFX
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = SNP.6.a
+		hidden_effect = {
+
+		}
+	}
+}
+country_event = {
+	id = SNP.7 #누가 이 땅을 지키겠는가?
+	title = SNP.7.title
+	desc = SNP.7.desc
+	picture = GFX
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = SNP.7.a
+		hidden_effect = {
+
+		}
+	}
+}
+country_event = {
+	id = SNP.8 #누가 전선의 선봉에 서겠는가?
+	title = SNP.8.title
+	desc = SNP.8.desc
+	picture = GFX
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = SNP.8.a
+		hidden_effect = {
+
+		}
+	}
+}
+country_event = {
+	id = SNP.9 #누가 라이히스탁에 깃발을 꽂겠는가?
+	title = SNP.9.title
+	desc = SNP.9.desc
+	picture = GFX
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = SNP.9.a
+		hidden_effect = {
+
+		}
+	}
+}

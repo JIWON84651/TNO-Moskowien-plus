@@ -1,0 +1,9 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			MCW = {
+				load_focus_tree = Moskowien_MCW_FocusTree
+			}
+		}
+	}
+}

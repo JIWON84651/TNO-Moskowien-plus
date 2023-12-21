@@ -1,0 +1,30 @@
+guiTypes = {
+	containerWindowType = {
+		name = "TNO_SNP_GUIs_open"
+		size = { width = 220 height = 128 }
+		position = { x = 0 y = 289 }
+
+		buttonType = {
+			name = "SNP_menu_open"
+			spriteType = "GFX_Chaos_Moscovien"
+			position = { x = 230 y = 32 }
+			scale = 0.60
+		}
+	}
+	containerWindowType = {
+		name = "TNO_SNP_main_GUI"
+		size = { width = 800 height = 600 }
+		position = { x = 545 y = -260 }
+		show_position = { x = 545 y = 80 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+		moveable = yes
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_thin_border2"
+		}
+	}
+}

@@ -1,0 +1,1846 @@
+focus_tree = {
+	id = Moskowien_SNP_1
+	country = {
+		factor = 0
+		modifier = {
+			add = 11
+			tag = SNP
+		}
+	}
+	default = no
+	focus = {
+		id = organization_committee
+		icon = GFX_Generic_Bill_of_Rights
+		cost = 5
+		x = 3
+		y = 0
+		completion_reward = {
+			custom_effect_tooltip = SNP_organization_committee
+			remove_ideas = MCW_emergence
+		}
+
+	}
+	focus = {
+		id = make_germany_great_again
+		icon = GFX_GNG_Cattle_Dont_Work_Hard_Enough
+		cost = 5
+		x = 26
+		y = 0
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SGR_Moskowie_Industry_tt
+				NOT = {
+					has_idea = MCW_emergence
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_great_game
+		}
+	}
+	focus = {
+		id = nation_in_dark
+		icon = GFX_CAU_loyalty_to_reichskommissariat
+		cost = 5
+		x = 21
+		y = 1
+		prerequisite = {
+			focus = make_germany_great_again
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_make_germany_great_again
+			declare_war_on = {
+				target = CAU
+				type = annex_everything
+			}
+		}
+
+	}
+	focus = {
+		id = nation_of_hypocrisy
+		icon = GFX_generic_ostland
+		cost = 5
+		x = 31
+		y = 1
+		prerequisite = {
+			focus = make_germany_great_again
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SGR_nation_of_hypocrisy_tt
+				NOT = {
+					country_exists = UKR
+					country_exists = UKS
+					country_exists = FUK
+					country_exists = BOV
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_make_germany_great_again
+			declare_war_on = {
+				target = OST
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = DST
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = JST
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MST
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = UPO
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BLR
+				type = annex_everything
+			}
+		}
+
+	}
+	focus = {
+		id = end_of_hypocrisy
+		icon = GFX_OST_In_This_Blood_We_Are_Mirrored
+		cost = 5
+		x = 30
+		y = 2
+		prerequisite = {
+			focus = nation_of_hypocrisy
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_end_of_hypocrisy
+		}
+
+	}
+	focus = {
+		id = with_there_greed
+		icon = GFX_GNG_End_Corruption
+		cost = 5
+		x = 30
+		y = 3
+		prerequisite = {
+			focus = end_of_hypocrisy
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_with_there_greed
+		}
+
+	}
+	focus = {
+		id = stabilization_OST
+		icon = GFX_POL_The_Partisan_Problem
+		cost = 5
+		x = 32
+		y = 2
+		prerequisite = {
+			focus = nation_of_hypocrisy
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_make_germany_great_again
+		}
+
+	}
+	focus = {
+		id = with_knife
+		icon = GFX_UKR_More_Of_Everything_All_The_Time
+		cost = 5
+		x = 32
+		y = 3
+		prerequisite = {
+			focus = stabilization_OST
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_make_germany_great_again
+		}
+
+	}
+	focus = {
+		id = OST_collaps
+		icon = GFX_OST_Blackest_Night
+		cost = 5
+		x = 31
+		y = 4
+		prerequisite = {
+			focus = with_knife
+		}
+		prerequisite = {
+			focus = with_there_greed
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_OST_collaps
+			hidden_effect = {
+				add_state_core = 11
+				add_state_core = 12
+				add_state_core = 13
+				add_state_core = 95
+				add_state_core = 96
+				add_state_core = 189
+				add_state_core = 190
+				add_state_core = 191
+				add_state_core = 194
+				add_state_core = 204
+				add_state_core = 206
+				add_state_core = 207
+				add_state_core = 943
+				add_state_core = 1395
+				add_state_core = 1396
+				add_state_core = 1397
+				add_state_core = 1398
+				add_state_core = 1399
+				add_state_core = 1400
+				add_state_core = 1401
+				add_state_core = 1402
+				add_state_core = 1403
+				add_state_core = 1404
+				add_state_core = 1405
+				add_state_core = 1406
+				add_state_core = 1407
+				add_state_core = 1440
+			}
+		}
+
+	}
+	focus = {
+		id = end_the_paradise_undone
+		icon = GFX_GNG_Paradise_Lost
+		cost = 5
+		x = 24
+		y = 2
+		available = {
+			NOT = {
+				UKR = {
+					is_subject_of = GER
+				}
+			}
+		}
+		prerequisite = {
+			focus = nation_divided
+		}
+		mutually_exclusive = {
+			focus = strike_the_german_hegemony
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_make_germany_great_again
+			declare_war_on = {
+				target = UKR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = FUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BOV
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = UKS
+				type = annex_everything
+			}
+		}
+
+	}
+	focus = {
+		id = paradise_done
+		icon = GFX_UKR_They_Tried_To_Kill_Us_We_Survived
+		cost = 5
+		x = 26
+		y = 5
+		prerequisite = {
+			focus = make_ukrain_breadbasket
+			focus = overthrowing_government
+		}
+		prerequisite = {
+			focus = Uprising
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_paradise_done
+			hidden_effect = {
+				SNP = {
+					add_state_core = 1429
+					add_state_core = 1427
+					add_state_core = 1431
+					add_state_core = 93
+					add_state_core = 199
+					add_state_core = 1430
+					add_state_core = 201
+					add_state_core = 202
+					add_state_core = 773
+					add_state_core = 197
+					add_state_core = 259
+					add_state_core = 226
+					add_state_core = 1426
+					add_state_core = 221
+					add_state_core = 200
+					add_state_core = 227
+					add_state_core = 228
+					add_state_core = 218
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = toward_soil
+		icon = GFX_UKR_Blood_And_Soil
+		cost = 5
+		x = 24
+		y = 3
+		prerequisite = {
+			focus = end_the_paradise_undone
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_make_germany_great_again
+		}
+
+	}
+	focus = {
+		id = make_ukrain_breadbasket
+		icon = GFX_IRE_bread_and_roses
+		cost = 5
+		x = 24
+		y = 4
+		available = {
+			
+		}
+		prerequisite = {
+			focus = toward_soil
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_make_germany_great_again
+		}
+
+	}
+	focus = {
+		id = use_divided
+		icon = GFX_UKR_The_Spears_From_Below
+		cost = 5
+		x = 26
+		y = 3
+		prerequisite = {
+			focus = end_the_paradise_undone
+			focus = strike_the_german_hegemony
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_make_germany_great_again
+			UKR = {
+				add_ideas = SNP_use_divided_idea
+			}
+		}
+
+	}
+	focus = {
+		id = Uprising
+		icon = GFX_UKR_Eternal_Monuments_to_Unity
+		cost = 5
+		x = 26
+		y = 4
+		prerequisite = {
+			focus = use_divided
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_Uprising
+		}
+
+	}
+	focus = {
+		id = weaknesses_between_hegemony
+		icon = GFX_UKR_the_nationalists_westwards
+		cost = 5
+		x = 28
+		y = 3
+		prerequisite = {
+			focus = strike_the_german_hegemony
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_make_germany_great_again
+			228 = { set_demilitarized_zone = yes }
+			218 = { set_demilitarized_zone = yes }
+			221 = { set_demilitarized_zone = yes }
+			227 = { set_demilitarized_zone = yes }
+		}
+
+	}
+	focus = {
+		id = overthrowing_government
+		icon = GFX_UKR_Into_The_Bloody_Fray
+		cost = 5
+		x = 28
+		y = 4
+		prerequisite = {
+			focus = weaknesses_between_hegemony
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_make_germany_great_again
+			
+		}
+
+	}
+	focus = {
+		id = strike_the_german_hegemony 
+		icon = GFX_PRM_Cull_the_Weak
+		cost = 5
+		x = 28
+		y = 2
+		available = {
+			UKR = {
+				is_subject_of = GER
+			}
+		}
+		prerequisite = {
+			focus = nation_divided
+		}
+		mutually_exclusive = {
+			focus = end_the_paradise_undone
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_make_germany_great_again
+			UKR = {
+				add_stability = -0.1
+				add_ideas = SNP_strike_the_german_hegemony_idea
+			}
+		}
+
+	}
+	focus = {
+		id = nation_divided
+		icon = GFX_UKR_strengthening_our_grip
+		cost = 5
+		x = 26
+		y = 1
+		prerequisite = {
+			focus = make_germany_great_again
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SGR_nation_divided_tt
+				NOT = {
+					country_exists = CAU
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_make_germany_great_again
+		}
+
+	}
+	focus = {
+		id = stop_mad_king
+		icon = GFX_CAU_hang_up_new_portraits
+		cost = 5
+		x = 20
+		y = 2
+		prerequisite = {
+			focus = nation_in_dark
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_make_germany_great_again
+			add_war_support = 0.1
+		}
+
+	}
+	focus = {
+		id = protect_resource
+		icon = GFX_Protect_the_oil
+		cost = 5
+		x = 20
+		y = 3
+		prerequisite = {
+			focus = stop_mad_king
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_make_germany_great_again
+			add_ideas = SNP_protect_resource_idea
+		}
+
+	}
+	focus = {
+		id = rebuild_caucasia
+		icon = GFX_Assist_Caucasia
+		cost = 5
+		x = 22
+		y = 2
+		prerequisite = {
+			focus = nation_in_dark
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_make_germany_great_again
+			set_temp_variable = { money_reserves_temp = -0.8 }
+			econ_money_reserves_change_raw_money = yes
+			set_temp_variable = { inflation_temp = 0.3 }
+			econ_inflation_change = yes
+			set_temp_variable = { gdp_growth_temp = 1.0 }
+			econ_gdp_growth_change = yes
+		}
+
+	}
+	focus = {
+		id = take_some_photo
+		icon = GFX_GIB_lights_camera
+		cost = 5
+		x = 22
+		y = 3
+		prerequisite = {
+			focus = rebuild_caucasia
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_make_germany_great_again
+			add_stability = 0.1
+		}
+
+	}
+	focus = {
+		id = reconstruction_committee
+		icon = GFX_GER_a_bureaucracy_to_rely_on
+		cost = 5
+		x = 21
+		y = 4
+		prerequisite = {
+			focus = take_some_photo
+		}
+		prerequisite = {
+			focus = protect_resource
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_reconstruction_committee
+			hidden_effect = {
+				SNP = {
+					add_state_core = 231
+					add_state_core = 232
+					add_state_core = 234
+					add_state_core = 235
+					add_state_core = 1552
+					add_state_core = 1554
+					add_state_core = 1556
+					add_state_core = 1558
+					add_state_core = 1559
+					add_state_core = 1560
+					add_state_core = 1561
+					add_state_core = 1564
+				}
+			}
+			set_country_flag = Beyond_east_flag
+		}
+
+	}
+	focus = {
+		id = Moskowie_Industry
+		icon = GFX_GNG_The_Spanner_in_the_Works
+		cost = 1
+		x = 13
+		y = 0
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SGR_Moskowie_Industry_tt
+				NOT = {
+					has_idea = MCW_emergence
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_Moskowie_Industry
+		}
+
+	}
+	focus = {
+		id = Heavy_Industry_Development_Initiatives
+		icon = GFX_CHI_Modern_Construction_Equipment_New
+		cost = 3
+		x = 11
+		y = 1
+		prerequisite = {
+			focus = Moskowie_Industry
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_Heavy_Industry_Development_Initiatives
+			add_timed_idea = {
+				idea = SNP_Heavy_Industry_Development_Initiatives_ideas
+				days = 168
+			}
+		}
+
+	}
+	focus = {
+		id = Moscovien_Resource_Industries
+		icon = GFX_GNG_The_Steel_Belt
+		cost = 3
+		x = 10
+		y = 2
+		prerequisite = {
+			focus = Heavy_Industry_Development_Initiatives
+		}
+		completion_reward = {
+			add_ideas = Moscovien_Resource_Industries_ideas
+		}
+
+	}
+	focus = {
+		id = Lipetsk_Steel
+		icon = GFX_ANG_metal_market
+		cost = 3
+		x = 9
+		y = 3
+		prerequisite = {
+			focus = Moscovien_Resource_Industries
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_resource
+		}
+
+	}
+	focus = {
+		id = Kalmukhins_Uranium
+		icon = GFX_KOM_uranium_extraction_methods_ultravisionary
+		cost = 3
+		x = 11
+		y = 3
+		prerequisite = {
+			focus = Moscovien_Resource_Industries
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_resource
+		}
+
+	}
+	focus = {
+		id = Setting_up_state_owned_steel_mill
+		icon = GFX_OMS_steel_heart_of_omsk
+		cost = 3
+		x = 9
+		y = 4
+		prerequisite = {
+			focus = Lipetsk_Steel
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_resource
+		}
+
+	}
+	focus = {
+		id = Partnering_with_Devil
+		icon = GFX_BRG_Focus_The_Uranium_Of_The_Zentralmassiv
+		cost = 3
+		x = 11
+		y = 4
+		prerequisite = {
+			focus = Kalmukhins_Uranium
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_resource
+		}
+
+	}
+	focus = {
+		id = Expand_to_resource_exports
+		icon = GFX_GNG_A_Safe_Port
+		cost = 3
+		x = 10
+		y = 5
+		prerequisite = {
+			focus = Setting_up_state_owned_steel_mill
+		}
+		prerequisite = {
+			focus = Partnering_with_Devil
+		}
+		completion_reward = {
+			add_ideas = SNP_Expand_to_resource_exports_ideas
+			set_temp_variable = { gdp_growth_temp = 2.0 }
+			econ_gdp_growth_change = yes
+			set_temp_variable = { inflation_temp = 0.8 }
+			econ_inflation_change = yes
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.15 } #already converted to billion
+			econ_GDP_boost_once_percentage = yes
+		}
+
+	}
+	focus = {
+		id = Using_Chaotic_Politics
+		icon = GFX_generic_political_chaos
+		cost = 3
+		x = 13
+		y = 2
+		prerequisite = {
+			focus = Heavy_Industry_Development_Initiatives
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_Using_Chaotic_Politics
+		}
+
+	}
+	focus = {
+		id = Private_Industry
+		icon = GFX_BRT_Mind_the_Economy
+		cost = 3
+		x = 16
+		y = 1
+		prerequisite = {
+			focus = Moskowie_Industry
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_Private_Industry
+			add_timed_idea = {
+				idea = SNP_Private_Industry_ideas
+				days = 84
+			}
+			social_funding_minimal_increase_med = yes
+		}
+
+	}
+	focus = {
+		id = Strengthening_domestic_markek
+		icon = GFX_USA_Bits_And_Pieces
+		cost = 3
+		x = 16
+		y = 2
+		prerequisite = {
+			focus = Private_Industry
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_Strengthening_domestic_markek
+			set_temp_variable = { econ_centralization_temp = 10 }
+			econ_centralization_change = yes
+		}
+
+	}
+	focus = {
+		id = Rise_of_middle_class
+		icon = GFX_GNG_Daytime_Work_Only
+		cost = 3
+		x = 16
+		y = 4
+		prerequisite = {
+			focus = Strengthening_domestic_markek
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_Rise_of_middle_class
+			set_temp_variable = { gdp_growth_temp = 1.0 }
+			econ_gdp_growth_change = yes
+			set_temp_variable = { inflation_temp = 0.5 }
+			econ_inflation_change = yes
+			set_temp_variable = { income_tax_temp = -0.01 }
+			econ_income_tax_rate_change = yes
+			set_temp_variable = { business_tax_temp = -0.05 }
+			econ_business_tax_rate_change = yes
+		}
+
+	}
+	focus = {
+		id = cure
+		icon = GFX_USA_SAW_Universal_Service_Act
+		cost = 3
+		x = 15
+		y = 3
+		prerequisite = {
+			focus = Strengthening_domestic_markek
+		}
+		completion_reward = {
+			TNO_improve_minimum_wage_policy_effectiveness_low = yes
+			army_funding_minimal_increase_low = yes
+			set_temp_variable = { inflation_temp = 0.5 }
+			econ_inflation_change = yes
+		}
+
+	}
+	focus = {
+		id = Social_Services
+		icon = GFX_USA_Americanist_Cities
+		cost = 3
+		x = 17
+		y = 3
+		prerequisite = {
+			focus = Strengthening_domestic_markek
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_Social_Services
+			social_funding_minimal_increase_med = yes
+			TNO_improve_unemployment_policy_effectiveness_med = yes
+			TNO_improve_minimum_wage_policy_effectiveness_low = yes
+			TNO_improve_pensions_policy_effectiveness_low = yes
+			set_temp_variable = { inflation_temp = 0.5 }
+			econ_inflation_change = yes
+		}
+
+	}
+	focus = {
+		id = Give_everyone_weapon
+		icon = GFX_IND_rifles_guns_cannons
+		cost = 3
+		x = 13
+		y = 3
+		prerequisite = {
+			focus = Using_Chaotic_Politics
+		}
+		completion_reward = {
+			custom_effect_tooltip = SNP_Give_everyone_weapon
+		}
+
+	}
+	focus = {
+		id = System_maintenance
+		icon = GFX_USA_Rules_and_Regulation
+		cost = 2
+		prerequisite = {
+			focus = organization_committee
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = SNP_Authenticity_Appeal
+		}
+
+	}
+	focus = {
+		id = Loyalty_Reaffirmation
+		icon = GFX_ENG_Wulfs_Reports_are_Getting_Worse
+		cost = 2
+		prerequisite = {
+			focus = System_maintenance
+		}
+		x = 1
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = SNP_Loyalty_Reaffirmation
+			add_timed_idea = { idea = SNP_Loyalty_Reaffirmation_idea days = 60 }
+		}
+
+	}
+	focus = {
+		id = Take_out_knife
+		icon = GFX_CAU_purge_the_officers
+		cost = 2
+		prerequisite = {
+			focus = Loyalty_Reaffirmation
+		}
+		x = 0
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = SNP_Take_out_knife
+			add_timed_idea = { idea = SNP_Take_out_knife_idea days = 180 }
+		}
+
+	}
+	focus = {
+		id = Wareconomy
+		icon = GFX_GER_das_liger
+		cost = 2
+		prerequisite = {
+			focus = organization_committee
+		}
+		x = 2
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = SNP_Wareconomy
+			army_funding_maximal_increase_low = yes
+			army_funding_minimal_increase_low = yes
+		}
+
+	}
+	focus = {
+		id = Economic_Fundamentals_Repair
+		icon = GFX_GNG_An_Economy_Besieged
+		cost = 2
+		prerequisite = {
+			focus = organization_committee
+		}
+		x = 4
+		y = 1
+		
+		completion_reward = {
+			custom_effect_tooltip = SNP_Economic_Fundamentals_Repair
+			set_temp_variable = { temp_econ_GDP_boost_percentage = 0.10 }
+			econ_GDP_boost_once_percentage = yes
+		}
+
+	}
+	focus = {
+		id = Bring_back_old_glory
+		icon = GFX_SGR_prussias_glory
+		cost = 4
+		prerequisite = {
+			focus = Wareconomy
+		}
+		prerequisite = {
+			focus = Economic_Fundamentals_Repair
+		}
+		x = 3
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = SNP_Warriors_Trust_1
+			TNO_improve_training_policy_effectiveness_low = yes
+		}
+
+	}
+	focus = {
+		id = Prussian_discipline
+		icon = GFX_COG_because_men_will_win_the_war
+		cost = 2
+		prerequisite = {
+			focus = Bring_back_old_glory
+		}
+		x = 2
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = SNP_Warriors_Trust_3
+		}
+
+	}
+	focus = {
+		id = Industry_based_maintenance
+		icon = GFX_USA_workers_for_business
+		cost = 2
+		prerequisite = {
+			focus = Bring_back_old_glory
+		}
+		x = 4
+		y = 3
+		completion_reward = {
+			set_temp_variable = { gdp_growth_temp = 0.6}
+			econ_gdp_growth_change = yes
+			set_temp_variable = { inflation_temp = 0.3 }
+			econ_inflation_change = yes
+			set_temp_variable = { income_tax_temp = -0.05 }
+			econ_income_tax_rate_change = yes
+			set_temp_variable = { business_tax_temp = -0.05 }
+			econ_business_tax_rate_change = yes
+
+		}
+
+	}
+	focus = {
+		id = To_world_stage
+		icon = GFX_USA_Zip_It_Lock_It
+		cost = 2
+		prerequisite = {
+			focus = organization_committee
+		}
+		x = 6
+		y = 1
+		completion_reward = {
+			add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = Germany_Influence_Departure
+		icon = GFX_GER_Restoring_Party_Unity
+		cost = 2
+		prerequisite = {
+			focus = To_world_stage
+		}
+		x = 5
+		y = 2
+		completion_reward = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = large_decrease
+			}
+		}
+
+	}
+	focus = {
+		id = Time_for_diplomacy
+		icon = GFX_USA_The_Truman_Doctrine
+		cost = 2
+		prerequisite = {
+			focus = Germany_Influence_Departure
+		}
+		x = 6
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = SNP_Time_for_diplomacy
+		}
+
+	}
+	focus = {
+		id = Beyond_window
+		icon = GFX_JAP_window_of_opportunity
+		cost = 5
+		prerequisite = {
+			focus = Take_out_knife
+		}
+		prerequisite = {
+			focus = Prussian_discipline
+		}
+		prerequisite = {
+			focus = Industry_based_maintenance
+		}
+		prerequisite = {
+			focus = Time_for_diplomacy
+		}
+		x = 3
+		y = 4
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SGR_Beyond_window
+				has_idea = MCW_dissolution_1
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGR_Beyond_window_tt
+			remove_ideas = SNP_Chaos_in_Moscovien
+		}
+
+	}
+	focus = {
+		id = Beyond_east
+		icon = GFX_PRM_Struggle_For_Survival
+		cost = 5
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = Beyond_east_tt
+				has_country_flag = Beyond_east_flag
+			}
+		}
+		x = 26
+		y = 7
+		completion_reward = {
+			custom_effect_tooltip = SGR_Beyond_east_tt
+		}
+	}
+	focus = {
+		id = at_sea
+		icon = GFX_at_sea
+		cost = 5
+		prerequisite = {
+			focus = Beyond_east
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = NOT_doing_other_project
+				NOT = {
+					OR = {
+						has_country_flag = at_land
+					}
+					OR = {
+						has_country_flag = at_air
+					}
+				}
+			}
+		}
+		x = 20
+		y = 8
+		completion_reward = {
+			custom_effect_tooltip = at_sea_tt
+			navy_experience = 50
+			set_country_flag = at_sea
+		}
+	}
+	focus = {
+		id = prepare_for_unlimited_submarine_warfare
+		icon = GFX_GER_from_sea_to_sea
+		cost = 5
+		prerequisite = {
+			focus = at_sea
+		}
+		x = 19
+		y = 9
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {
+		id = developing_anti_submarine_destroyer
+		icon = GFX_ENG_sailing_trawlers
+		cost = 5
+		prerequisite = {
+			focus = prepare_for_unlimited_submarine_warfare
+		}
+		x = 19
+		y = 10
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+			}
+		}
+	}
+	focus = {
+		id = reorganizing_war_navy
+		icon = GFX_ENG_Keep_An_Eye
+		cost = 5
+		prerequisite = {
+			focus = at_sea
+		}
+		x = 21
+		y = 9
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.3
+				uses = 2
+				category = naval_equipment
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.3
+				uses = 1
+				category = naval_doctrine
+			}
+			navy_experience = 10
+		}
+	}
+	focus = {
+		id = shipyard_construction
+		icon = GFX_USA_Finance_the_Ports
+		cost = 5
+		prerequisite = {
+			focus = at_sea
+		}
+		x = 21
+		y = 10
+		completion_reward = {
+			195 = {
+				set_temp_variable = { temp_state_value_addition = 0.2 }
+				econ_state_value_change_addition = yes
+				add_state_modifier = { modifier = { state_GDP_growth_modifier = 5 } }
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes
+					province = 3151
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = at_sea_2
+		icon = GFX_UKS_peace_and_bread
+		cost = 5
+		prerequisite = {
+			focus = shipyard_construction
+		}
+		prerequisite = {
+			focus = developing_anti_submarine_destroyer
+		}
+		x = 20
+		y = 11
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = at_land
+		icon = GFX_ENG_The_Panzers_will_wait
+		cost = 5
+		prerequisite = {
+			focus = Beyond_east
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = NOT_doing_other_project
+				NOT = {
+					OR = {
+						has_country_flag = at_sea
+					}
+					OR = {
+						has_country_flag = at_air
+					}
+				}
+			}
+		}
+		x = 26
+		y = 8
+		completion_reward = {
+			custom_effect_tooltip = at_land_tt
+			army_experience = 50
+			set_country_flag = at_land
+		}
+	}
+	focus = {
+		id = at_land_2
+		icon = GFX_GNG_Close_Up_Shop
+		cost = 5
+		prerequisite = {
+			focus = improving_soldier_combat
+		}
+		prerequisite = {
+			focus = military_mechanization
+		}
+		x = 26
+		y = 11
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = developing_personalizers 
+		icon = GFX_GNG_Ship_Over_Prototypes
+		cost = 5
+		prerequisite = {
+			focus = at_land
+		}
+		x = 25
+		y = 9
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = improving_soldier_combat 
+		icon = GFX_ENG_Arm_of_The_Party_Arm_of_The_State	
+		cost = 5
+		prerequisite = {
+			focus = developing_personalizers
+		}
+		x = 25
+		y = 10
+		completion_reward = {
+			add_ideas = SNP_improving_soldier_combat
+		}
+	}
+	focus = {
+		id = armored_equipment_development 
+		icon = GFX_generic_tank_warfare
+		cost = 5
+		prerequisite = {
+			focus = at_land
+		}
+		x = 27
+		y = 9
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = MBT
+			}
+		}
+	}
+	focus = {
+		id = military_mechanization 
+		icon = GFX_KOM_army_for_the_world
+		cost = 5
+		prerequisite = {
+			focus = armored_equipment_development
+		}
+		x = 27
+		y = 10
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = at_air
+		icon = GFX_generic_air_warfare
+		cost = 5
+		prerequisite = {
+			focus = Beyond_east
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = NOT_doing_other_project
+				NOT = {
+					OR = {
+						has_country_flag = at_sea
+					}
+					OR = {
+						has_country_flag = at_land
+					}
+				}
+			}
+		}
+		x = 32
+		y = 8
+		completion_reward = {
+			custom_effect_tooltip = at_air_tt
+			air_experience = 50
+			set_country_flag = at_air
+		}
+	}
+	focus = {
+		id = at_air_2
+		icon = GFX_GNG_Next_Steps
+		cost = 5
+		prerequisite = {
+			focus = invite_international_technologists
+		}
+		prerequisite = {
+			focus = look_at_europe
+		}
+		x = 32
+		y = 11
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = fighter_development
+		icon = GFX_ENG_The_fighters_as_well
+		cost = 5
+		prerequisite = {
+			focus = at_air
+		}
+		x = 31
+		y = 9
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = fighter
+			}
+		}
+	}
+	focus = {
+		id = invite_international_technologists
+		icon = GFX_GNG_Establish_Research_Parks
+		cost = 5
+		prerequisite = {
+			focus = fighter_development
+		}
+		x = 31
+		y = 10
+		completion_reward = {
+			add_research_slot = 1
+			add_tech_bonus = {
+				bonus = 0.2
+				uses = 3
+				category = air_equipment
+			}
+			set_temp_variable = { debt_temp = 1.5 }
+			econ_national_debt_change = yes
+		}
+	}
+	focus = {
+		id = battlefield_eyes
+		icon = GFX_CHI_Modern_Radar_Stations
+		cost = 5
+		prerequisite = {
+			focus = at_air
+		}
+		x = 33
+		y = 9
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = radar_tech
+			}
+		}
+	}
+	focus = {
+		id = look_at_europe
+		icon = GFX_ENG_our_rightful_place_in_the_world
+		cost = 5
+		prerequisite = {
+			focus = at_air
+		}
+		x = 33
+		y = 10
+		completion_reward = {
+			add_ideas = SNP_look_at_europe
+			add_intel = {
+				target = GER
+				civilian_intel = 25
+				army_intel = 20
+				navy_intel = 20
+				airforce_intel = 20
+			}
+		}
+	}
+	focus = {
+		id = great_war
+		icon = GFX_ENG_a_future_for_patriots
+		cost = 5
+		prerequisite = {
+			focus = at_air_2
+		}
+		prerequisite = {
+			focus = at_land_2
+		}
+		prerequisite = {
+			focus = at_sea_2
+		}
+		x = 26
+		y = 12
+		completion_reward = {
+			custom_effect_tooltip = great_war_tt
+			declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
+		}
+	}
+	## 전쟁 트리 ##
+	focus = {
+		id = SNP_war_tree1
+		icon = GFX_POL_Our_One_Advantage
+		cost = 5
+		prerequisite = {
+		}
+		available = { 
+			custom_trigger_tooltip = {
+				tooltip = SNP_war_tree1_ctt
+				has_war_with = GER
+			}
+		}
+		x = 43
+		y = 0
+		completion_reward = {
+			custom_effect_tooltip = SNP_war_tree1_tt
+		}
+	}
+	focus = {
+		id = SNP_war_tree1-2
+		icon = GFX_GER_Enforcing_Government_Unity
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree1
+		}
+		x = 43
+		y = 1
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = SNP_war_tree_1-1
+		icon = GFX_ENG_A_Fair_Hand
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree1-2
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SNP_war_tree_ctt
+				NOT = {
+					OR = {
+						has_country_flag = SNP_war_tree_2-1
+					}
+					OR = {
+						has_country_flag = SNP_war_tree_3-1
+					}
+				}
+			}
+		}
+		x = 37
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = SNP_war_tree_1_1_tt
+			set_country_flag = SNP_war_tree_1-1
+		}
+	}
+	focus = {
+		id = SNP_war_tree_1-2
+		icon = GFX_ENG_A_New_Commander
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree_1-1
+		}
+		x = 35
+		y = 3
+		completion_reward = {
+			country_event = { id = SNP.1 }
+		}
+	}
+	focus = {
+		id = SNP_war_tree_1-3
+		icon = GFX_ENG_Run_The_Streets
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree_1-1
+		}
+		x = 37
+		y = 3
+		completion_reward = {
+			country_event = { id = SNP.2 }
+		}
+	}
+	focus = {
+		id = SNP_war_tree_1-4
+		icon = GFX_ENG_wulfs_trust
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree_1-1
+		}
+		x = 39
+		y = 3
+		completion_reward = {
+			country_event = { id = SNP.3 }
+		}
+	}
+	focus = {
+		id = SNP_war_tree_1-5
+		icon = GFX_ORE_adapting_their_strategies
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree_1-2
+		}
+		prerequisite = {
+			focus = SNP_war_tree_1-3
+		}
+		prerequisite = {
+			focus = SNP_war_tree_1-4
+		}
+		x = 37
+		y = 4
+		completion_reward = {
+			custom_effect_tooltip = SNP_war_tree_1_5
+			clr_country_flag = SNP_war_tree_1-1
+		}
+	}
+	focus = {
+		id = SNP_war_tree_2-1
+		icon = GFX_Generic_Minority_Protections
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree1-2
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SNP_war_tree_ctt
+				NOT = {
+					OR = {
+						has_country_flag = SNP_war_tree_1-1
+					}
+					OR = {
+						has_country_flag = SNP_war_tree_3-1
+					}
+				}
+			}
+		}
+		x = 43
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = SNP_war_tree_2_1_tt
+			set_country_flag = SNP_war_tree_2-1
+		}
+	}
+	focus = {
+		id = SNP_war_tree_2-2
+		icon = GFX_GER_monuments_great_war
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree_2-1
+		}
+		x = 41
+		y = 3
+		completion_reward = {
+			country_event = { id = SNP.4 }
+		}
+	}
+	focus = {
+		id = SNP_war_tree_2-3
+		icon = GFX_ENG_a_final_victory_over_terror
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree_2-1
+		}
+		x = 43
+		y = 3
+		completion_reward = {
+			country_event = { id = SNP.5 }
+		}
+	}
+	focus = {
+		id = SNP_war_tree_2-4
+		icon = GFX_POL_The_Partisan_Problem
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree_2-1
+		}
+		x = 45
+		y = 3
+		completion_reward = {
+			country_event = { id = SNP.6 }
+		}
+	}
+	focus = {
+		id = SNP_war_tree_2-5
+		icon = GFX_POL_the_peoples_republic_secured
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree_2-2
+		}
+		prerequisite = {
+			focus = SNP_war_tree_2-3
+		}
+		prerequisite = {
+			focus = SNP_war_tree_2-4
+		}
+		x = 43
+		y = 4
+		completion_reward = {
+			custom_effect_tooltip = SNP_war_tree_2_5
+			clr_country_flag = SNP_war_tree_2-1
+		}
+	}
+	focus = {
+		id = SNP_war_tree_3-1
+		icon = GFX_ENG_A_Firm_Grip
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree1-2
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SNP_war_tree_ctt
+				NOT = {
+					OR = {
+						has_country_flag = SNP_war_tree_1-1
+					}
+					OR = {
+						has_country_flag = SNP_war_tree_2-1
+					}
+				}
+			}
+		}
+		x = 49
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = SNP_war_tree_3_1_tt
+			set_country_flag = SNP_war_tree_3-1
+		}
+	}
+	focus = {
+		id = SNP_war_tree_3-2
+		icon = GFX_ENG_while_englands_doom_repeats
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree_3-1
+		}
+		x = 47
+		y = 3
+		completion_reward = {
+			country_event = { id = SNP.7 }
+		}
+	}
+	focus = {
+		id = SNP_war_tree_3-3
+		icon = GFX_ENG_The_old_never_failed_them
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree_3-1
+		}
+		x = 49
+		y = 3
+		completion_reward = {
+			country_event = { id = SNP.8 }
+		}
+	}
+	focus = {
+		id = SNP_war_tree_3-4
+		icon = GFX_ENG_upticks_in_activity
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree_3-1
+		}
+		x = 51
+		y = 3
+		completion_reward = {
+			country_event = { id = SNP.9 }
+		}
+	}
+	focus = {
+		id = SNP_war_tree_3-5
+		icon = GFX_ENG_Give_Them_Free_Reign_in_the_Country
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree_3-2
+		}
+		prerequisite = {
+			focus = SNP_war_tree_3-3
+		}
+		prerequisite = {
+			focus = SNP_war_tree_3-4
+		}
+		x = 49
+		y = 4
+		completion_reward = {
+			custom_effect_tooltip = SNP_war_tree_3_5
+			clr_country_flag = SNP_war_tree_3-1
+		}
+	}
+	focus = {
+		id = SNP_war_tree_4-1
+		icon = GFX_GER_SGR_now_or_never
+		cost = 5
+		prerequisite = {
+			focus = SNP_war_tree_1-5
+		}
+		prerequisite = {
+			focus = SNP_war_tree_2-5
+		}
+		prerequisite = {
+			focus = SNP_war_tree_3-5
+		}
+		x = 43
+		y = 5
+		completion_reward = {
+			custom_effect_tooltip = SNP_war_tree_4_1
+		}
+	}
+	focus = {
+		id = SNP_war_tree_5-1
+		icon = GFX_USA_Gold_and_Silver
+		cost = 2
+		prerequisite = {
+			focus = SNP_war_tree_4-1
+		}
+		x = 41
+		y = 6
+		completion_reward = {
+			custom_effect_tooltip = SNP_war_tree_5_1
+			set_temp_variable = { inflation_temp = -0.5 }
+			econ_inflation_change = yes
+			set_temp_variable = { gdp_growth_temp = -0.3 } 
+			econ_gdp_growth_change = yes
+		}
+	}
+	focus = {
+		id = SNP_war_tree_5-2
+		icon = GFX_GNG_A_Shock_To_The_System
+		cost = 2
+		prerequisite = {
+			focus = SNP_war_tree_5-1
+		}
+		x = 40
+		y = 7
+		completion_reward = {
+			set_temp_variable = { gdp_growth_temp = -0.8 } 
+			econ_gdp_growth_change = yes
+			add_ideas = SNP_war_tree_5_2_idea
+		}
+	}
+	focus = {
+		id = SNP_war_tree_5-3
+		icon = GFX_ENG_Stabilize_Their_Growth
+		cost = 2
+		prerequisite = {
+			focus = SNP_war_tree_5-1
+		}
+		x = 42
+		y = 7
+		completion_reward = {
+			set_temp_variable = { inflation_temp = -1.75 }
+			econ_inflation_change = yes
+			set_temp_variable = { gdp_growth_temp = -0.5 } 
+			econ_gdp_growth_change = yes
+		}
+	}
+	focus = {
+		id = SNP_war_tree_5-4
+		icon = GFX_GNG_Corporate_Sanitation
+		cost = 2
+		prerequisite = {
+			focus = SNP_war_tree_5-2
+		}
+		prerequisite = {
+			focus = SNP_war_tree_5-3
+		}
+		x = 41
+		y = 8
+		completion_reward = {
+			army_funding_minimal_increase_med = yes
+			set_temp_variable = { gdp_growth_temp = -0.75 }
+			econ_gdp_growth_change = yes
+			set_temp_variable = { econ_centralization_temp = 7.5 }
+			econ_centralization_change = yes
+		}
+	}
+	focus = {
+		id = SNP_war_tree_6-1
+		icon = GFX_ENG_And_so_the_long_game_begins
+		cost = 2
+		prerequisite = {
+			focus = SNP_war_tree_4-1
+		}
+		x = 45
+		y = 6
+		completion_reward = {
+			custom_effect_tooltip = SNP_war_tree_6_1
+			army_funding_minimal_increase_low = yes
+			army_funding_maximal_increase_low = yes
+		}
+	}
+	focus = {
+		id = SNP_war_tree_6-2
+		icon = GFX_Generic_Money
+		cost = 2
+		prerequisite = {
+			focus = SNP_war_tree_6-1
+		}
+		x = 44
+		y = 7
+		completion_reward = {
+			set_temp_variable = { income_tax_temp = 0.05 }
+			econ_income_tax_rate_change = yes
+			set_temp_variable = { business_tax_temp = 0.03 }
+			econ_business_tax_rate_change = yes
+			set_temp_variable = { gdp_growth_temp = -0.3 } 
+			econ_gdp_growth_change = yes
+		}
+	}
+	focus = {
+		id = SNP_war_tree_6-3
+		icon = GFX_ENG_And_Bullets_as_well
+		cost = 2
+		prerequisite = {
+			focus = SNP_war_tree_6-1
+		}
+		x = 46
+		y = 7
+		completion_reward = {
+			add_ideas = SNP_war_tree_6_3_idea
+		}
+	}
+	focus = {
+		id = SNP_war_tree_6-4
+		icon = GFX_ENG_The_crews_on_auxiliary
+		cost = 2
+		prerequisite = {
+			focus = SNP_war_tree_6-2
+		}
+		prerequisite = {
+			focus = SNP_war_tree_6-3
+		}
+		x = 45
+		y = 8
+		completion_reward = {
+			add_ideas = SNP_war_tree_6_4_idea
+		}
+	}
+	focus = {
+		id = SNP_war_tree_7-1
+		icon = GFX_ENG_a_tower_of_fire
+		cost = 8
+		prerequisite = {
+			focus = SNP_war_tree_6-4
+		}
+		prerequisite = {
+			focus = SNP_war_tree_5-4
+		}
+		x = 43
+		y = 9
+		completion_reward = {
+			custom_effect_tooltip = SNP_war_tree_7_1
+			army_funding_minimal_increase_high = yes
+			army_funding_maximal_increase_high = yes
+			set_temp_variable = { gdp_growth_temp = -2.25 }
+			econ_gdp_growth_change = yes
+			set_temp_variable = { econ_centralization_temp = 12.5 }
+			econ_centralization_change = yes
+		}
+	}
+}
