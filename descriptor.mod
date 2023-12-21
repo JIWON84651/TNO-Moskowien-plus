@@ -1,4 +1,4 @@
-version="1.5.0b"
+version="1.0"
 tags={
 	"National Focuses"
 }
