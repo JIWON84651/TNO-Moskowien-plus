@@ -1,6 +1,6 @@
-version="1"
+version="1.5.0b"
 tags={
 	"National Focuses"
 }
-name="TNO - Moskowien plus"
-version="1.5.0b"
+name="TNO-Moskowien +"
+supported_version="1.12.14"
