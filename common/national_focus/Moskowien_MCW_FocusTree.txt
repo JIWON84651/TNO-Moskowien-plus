@@ -130,7 +130,7 @@ focus_tree = {
 	}
 	focus = {
 		id = MCW_default_tree_3-1
-		icon = GFX_MCW_default_tree_3-1
+		icon = GFX_MCW_i_do_not_like_the_indecisive
 		cost = 5
 		x = 8
 		y = 4
